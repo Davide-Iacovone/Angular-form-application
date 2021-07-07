@@ -1,0 +1,90 @@
+.container
+{
+    padding: 30px;
+    margin-top: 10vh;
+    height: 45vh;
+    width: 40vh;
+    box-shadow: -6px -2px 43px -18px rgba(0,0,0,0.75);
+    border-radius: 15px;
+}
+
+form
+{
+    margin-top: 2.5vh;
+}
+
+input
+{
+    border: none;
+    background-color: rgb(250, 250, 250);
+}
+
+input:focus
+{
+    box-shadow:-6px -2px 43px -18px rgba(0,0,0,0.75);
+}
+
+input.ng-touched.ng-invalid
+{
+    border: 3px solid red;
+}
+
+select
+{
+    border: none;
+    background-color: rgb(250, 250, 250);
+    height: 4.5vh;
+}
+
+select:focus
+{
+    box-shadow:-6px -2px 43px -18px rgba(0,0,0,0.75);
+}
+
+.hor
+{
+    background-color: #e9ecef;
+    padding-right: 5px;
+    border-radius: 2px;
+}
+
+textarea
+{
+    border: none;
+    resize: none;
+    background-color: rgb(250, 250, 250);
+}
+
+textarea:focus
+{
+    box-shadow:-6px -2px 43px -18px rgba(0,0,0,0.75);
+}
+
+.Check
+{
+    border: 3px solid #e9ecef;
+}
+
+:checked
+{
+    background-color: orange;
+    border: 3px solid orange;
+}
+
+button
+{
+    background-color: rgb(120, 235, 5);
+    border-radius: 22.5px;
+    border: none;
+    padding: 10px;
+    font-size: larger;
+}
+
+button:hover
+{
+    box-shadow:-6px -2px 43px -18px rgba(0,0,0,0.75);
+    background-color: rgb(120, 235, 5);
+}
+
+
+

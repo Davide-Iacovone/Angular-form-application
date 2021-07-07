@@ -1,0 +1,60 @@
+<div class="container h-100">
+    <h5 class="card-title text-center" style="font-size: 1.8em;">Wypełnij Formularz</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-center">Skontaktujemy się z tobą najszybciej jak to będzie możliwe</h6>
+    <form [formGroup]="exform">
+        <div class="form-floating mb-3">
+            <input formControlName="name" required type="text" class="form-control" id="floatingInput" placeholder="np. Apple">
+            <label for="floatingInput">Nazwa firmy/Imię i nazwisko<span style="color: orange;">*</span></label>
+        </div>
+          <div class="form-floating mb-3">
+            <input formControlName="NIP" required type="text" class="form-control" id="floatingInput" placeholder="123-45-67-890">
+            <label for="floatingPassword">Numer NIP<span style="color: orange;">*</span></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input formControlName="email" required type="email" class="form-control" id="floatingInput" placeholder="Example@email.com">
+            <label for="floatingPassword">E-mail<span style="color: orange;">*</span></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input formControlName="phone" type="text" class="form-control" id="floatingInput" placeholder="123 456 789">
+            <label for="floatingPassword">Numer Telefonu</label>
+        </div>
+        <select formControlName="dropdown" class="form-select mb-3" aria-label="Default select example">
+            <option value="1" selected>Współpraca</option>
+            <option value="2">Opcja druga</option>
+            <option value="3">Opcja trzecia</option>
+        </select>
+        <div class="form-floating mb-3 d-flex justify-content-between hor">
+            <label for="disabledTextInput floatingPassword" class="form-label">Czy posiadasz prawo jazdy kat. B?</label>
+            <input type="text" id="disabledTextInput" class="form-control" disabled>
+            <div class="form-check form-switch mx-auto my-auto switch">
+                <input formControlName="switch" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Tak</label>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea formControlName="message" class="form-control h-50" id="exampleFormControlTextarea1" rows="6" placeholder="Dzień dobry,"></textarea>
+            <label for="exampleFormControlTextarea1">Treść wiadomości</label>
+        </div>
+        <div class="form-check">
+            <input formControlName="checkAll" class="form-check-input Check" type="checkbox" value="" id="flexCheckDefault1" (change)="checkAll($event)">
+            <label class="form-check-label" for="flexCheckDefault1">
+              Zaznacz wszystkie zgody
+            </label>
+        </div>
+        <div class="form-check">
+            <input formControlName="check1" required class="form-check-input Check" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="isChecked1">
+            <label class="form-check-label" for="flexCheckDefault">
+              <small style="color: darkgrey;">Wyrażam zgodę na przetwarzanie moich danych osobowych podanych przeze mnie w powyższym formularzu.<span style="color: orange;">*</span></small>
+            </label>
+        </div>
+        <div class="form-check mb-3">
+            <input formControlName="check2" class="form-check-input Check" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="isChecked2">
+            <label class="form-check-label" for="flexCheckDefault">
+              <small style="color: darkgrey;">Wyrażam zgodę na kontakt telefoniczny w sprawach marketingowych.</small>
+            </label>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <button [disabled]="exform.invalid" type="button" class="btn btn-success" (click)="submit()">Wyślij wiadomość</button>
+        </div>
+    </form>
+</div>
